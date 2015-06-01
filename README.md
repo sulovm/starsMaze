@@ -1,1 +1,1 @@
-Описание на играта
+Game description
