@@ -14,24 +14,17 @@ class Cell(Enum):
 
 
 class Field:
-    def __init__(self, width, height, **kwargs):
+    def __init__(self, width, height, matrix):
         self.current = (0, 0)
         self.width, self.height = width, height
-        self.symbols = kwargs
+        self.matrix = matrix
         self.next_level = (width - 1, height - 1)
 
     def __get_item__(self, position):
         if position == self.current:
             return Cell.current
 
-        if position == self.next_level:
-            return Cell.next_level
-
-        for key in self.symbols:
-            if position in self.symbols[key]:
-                return Cell.eval(key)
-
-        return Cell.white
+        return self.matrix[position[0]][position[1]]
 
     def is_valid_position(self, position):
         x, y = position

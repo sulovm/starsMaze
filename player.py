@@ -9,7 +9,7 @@ class Player:
             self.health -= 1
 
     def increase_health(self):
-        if (self.health < 5):
+        if (self.health < 10):
             self.health += 1
 
     def decrease_energy(self):
@@ -17,7 +17,7 @@ class Player:
             self.energy -= 1
 
     def increase_energy(self):
-        if (self.energy < 5):
+        if (self.energy < 10):
             self.energy += 1
 
     def increase_property(self):
