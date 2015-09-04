@@ -1,15 +1,19 @@
-##StarsPuzzle
+##StarsMaze
 
-##Описание на играта
+##About the Game
 
-StarsPuzzle представлява таблица с размери 15х15. Някои от клетките са в тъмен цвят, което означава непроходими. Други пък са
-светлосини, което означава вода, в която играчът се "дави", ако попадне. Останалите клетки са бели, т.е. проходими. Фигурата, която представлява играча, се направлява
-от клавиатурата. Играчът има здраве и енергия с първоначални стойности около 5 и имущество с първоначална стойност 0. Из белите полета има Х-ове, някои неподвижни,
-други - подвижни. При попадане на топчето в поле, в което в същия момент има Х, здравето намалява с 1. Енергията намалява с времето. Ако енергията стане 0, здравето
-намалява с 1, а когато здравето стане 0 - "смърт" - връщане в началото на нивото. Из белите полета има също (подвижни или неподвижни) H (health) - увеличава здравето
-с 1, и E (energy) - прави същото с енергията. Има и звезди из белите полета, които увеличават имуществото с 1. За да се премине в следващото ниво, трябва имуществото
-да е поне определена стойност, иначе играчът ще трябва да се върне, за да събере още звезди. При смърт се губи цялото имущество, натрупано за това ниво.
+StarsMaze is a simple game for one player. The aim is to go through the levels and to collect all of the stars around the field. The field is a table with 10 
+tiles in a row and 10 tiles in a column. The player must stay only in the white tiles, the blue ones are "water", in which the player "drowns". The brown tiles
+cannot be reached. The start tile is in the upper left corner. The player is navigated by the arrow keys.
 
-##Реализация
+The player has three values - health, energy and stars. While collecting the stars, he should be carefull about the black X-es around the field. Contact with a X
+decreases health by 1. Some of these disguisting things even move! Also, every ten moves decrease energy by 1 and if energy reaches 0, health decreases by
+1. If health becomes 0, it is the same as the "drowning" - the game is over and lost. Fortunately, there are things around the field that increase health and energy. 
+On each level, the player must collect 10 stars in order to be able to continue. Having the necessary amount, the player can reach the next level by entering the
+tile in the lower right corner. One wins the game if he reaches the final tile on the last eighth level.
 
-Основната реализация на играта е два класа - един за играча и един за игралното поле.
+The game can be paused and unpaused every time by clicking 'P'.
+
+##Running the Game
+
+The game requires at least Python 3.4 and PyQt 5.x. It can be started by typing "python full_path" in the console where "full_path" is the full path to StarsMaze.py.
