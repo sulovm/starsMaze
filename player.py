@@ -2,7 +2,8 @@ class Player:
     def __init__(self):
         self.health = 5
         self.energy = 5
-        self.money = 0
+        self.stars = 0
+        self.STARS = 10
 
     def decrease_health(self):
         if (self.health > 0):
@@ -20,17 +21,26 @@ class Player:
         if (self.energy < 10):
             self.energy += 1
 
-    def increase_property(self):
-        self.money += 1
+    def max_energy(self):
+        self.energy = 5
 
-    def get_money(self):
-        return self.money
+    def max_health(self):
+        self.health = 5
 
-    def lost_money(self, loss):
-        if (loss >= self.money):
-            self.money = 0
-        else:
-            self.money -= loss
+    def increase_stars(self):
+        self.stars += 1
+
+    def get_stars(self):
+        return self.stars
+
+    def lost_stars(self):
+        self.stars = 0
+
+    def get_health(self):
+        return self.health
+
+    def get_energy(self):
+        return self.energy
 
     def is_alive(self):
         return self.health > 0
@@ -38,5 +48,9 @@ class Player:
     def is_rested(self):
         return self.energy > 0
 
+    def enough_stars(self):
+        return self.stars == self.STARS
+
     def die(self):
         self.health = 0
+        self.energy = 0
