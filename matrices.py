@@ -1,4 +1,7 @@
+
+
 from field import Cell
+
 
 i = Cell.current.value
 u = Cell.unreachable.value
