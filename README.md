@@ -1,3 +1,4 @@
+
 ##StarsMaze
 
 ##About the Game
