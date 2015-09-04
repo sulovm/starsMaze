@@ -1,4 +1,3 @@
-
 from field import Field
 from player import Player
 from matrices import Matrices

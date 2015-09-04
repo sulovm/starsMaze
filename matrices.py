@@ -1,5 +1,3 @@
-
-
 from field import Cell
 
 

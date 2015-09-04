@@ -1,4 +1,3 @@
-
 import unittest
 from field import Field
 from field import Cell
