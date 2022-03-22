@@ -32,11 +32,11 @@ class PlayerTest(unittest.TestCase):
 
     def test_max_energy(self):
         self.player.max_energy()
-        self.asertEqual(self.player.get_energy(), 5)
+        self.assertEqual(self.player.get_energy(), 5)
 
     def test_max_health(self):
         self.player.max_health()
-        self.asertEqual(self.player.get_health(), 5)
+        self.assertEqual(self.player.get_health(), 5)
 
     def test_die(self):
         self.player.die()
